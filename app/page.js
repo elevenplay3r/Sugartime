@@ -37,7 +37,6 @@ export default function HomePage() {
               <div style={{ height: 120, borderRadius: 12, background: "linear-gradient(135deg, var(--butter), var(--berry))", opacity: 0.85, marginBottom: 14 }} />
               <h3 style={{ fontSize: 17, marginBottom: 6 }}>{c.name}</h3>
               <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginBottom: 12 }}>{c.desc}</p>
-              <strong>₹{c.price}</strong>
             </div>
           ))}
         </div>
