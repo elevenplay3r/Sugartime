@@ -9,12 +9,12 @@ import SiteFooter from "../SiteFooter";
 // database code to the browser. If the catalog changes in lib/db.js, mirror
 // it here too, or fetch it from a small /api/cakes route instead.
 const CAKES = [
-  { id: "c1", name: "Classic Red Velvet", price: 1200, desc: "Layered red velvet with cream cheese frosting.", category: "Bestsellers" },
-  { id: "c2", name: "Belgian Chocolate Truffle", price: 1350, desc: "Dark chocolate sponge, ganache, truffle shavings.", category: "Bestsellers" },
-  { id: "c3", name: "Fresh Fruit Cream", price: 1100, desc: "Vanilla sponge, whipped cream, seasonal fruit.", category: "Classics" },
-  { id: "c4", name: "Black Forest", price: 1050, desc: "Chocolate sponge, cherries, whipped cream.", category: "Classics" },
-  { id: "c5", name: "Custom Photo Cake", price: 1600, desc: "Edible print of your own photo, any flavour base.", category: "Custom" },
-  { id: "c6", name: "Custom Theme Cake", price: 1900, desc: "Fully custom design — tell us the occasion.", category: "Custom" },
+  { id: "c1", name: "Classic Red Velvet", desc: "Layered red velvet with cream cheese frosting.", category: "Bestsellers" },
+  { id: "c2", name: "Belgian Chocolate Truffle", desc: "Dark chocolate sponge, ganache, truffle shavings.", category: "Bestsellers" },
+  { id: "c3", name: "Fresh Fruit Cream", desc: "Vanilla sponge, whipped cream, seasonal fruit.", category: "Classics" },
+  { id: "c4", name: "Black Forest", desc: "Chocolate sponge, cherries, whipped cream.", category: "Classics" },
+  { id: "c5", name: "Custom Photo Cake", desc: "Edible print of your own photo, any flavour base.", category: "Custom" },
+  { id: "c6", name: "Custom Theme Cake", desc: "Fully custom design — tell us the occasion.", category: "Custom" },
 ];
 const CATEGORIES = ["Bestsellers", "Classics", "Custom"];
 
@@ -75,7 +75,7 @@ export default function CakesPage() {
                   <h3 style={{ fontSize: 16, marginBottom: 4 }}>{c.name}</h3>
                   <p style={{ fontSize: 13, color: "var(--ink-soft)", marginBottom: 10 }}>{c.desc}</p>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <strong>₹{c.price}</strong>
+                    <span />
                     <button className="btn btn-primary" style={{ padding: "8px 16px", fontSize: 13 }}
                       onClick={() => { setSelected(c); setStep("form"); setError(""); }}>
                       Order this
